@@ -227,3 +227,23 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+emailjs.init('pz80n0IpotWWHc2mp');
+console.log('EmailJS initialized with User ID:', 'pz80n0IpotWWHc2mp');
+function sendEmail() {
+  const templateParams = {
+      from_name: document.getElementById('name').value,
+      from_email:document.getElementById('email').value,
+      subject:document.getElementById('subject').value,
+      message: document.getElementById('message').value,
+  };
+  
+
+  emailjs.send('service_0tt6bgj', 'template_h6nbqcn', templateParams)
+      .then((response) => {
+          console.log('Email sent successfully!', response.status, response.text);
+          alert('Email sent successfully!');
+      }, (error) => {
+          console.error('Failed to send email:', error);
+          alert('Failed to send email. Please try again later.');
+      });
+}
