@@ -1252,6 +1252,7 @@ section,
 
 .portfolio-details .portfolio-info .btn-visit:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
+  color: #060606;
 }
 
 .portfolio-details .portfolio-description h2 {
